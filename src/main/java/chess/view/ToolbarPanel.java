@@ -1,2 +1,6 @@
-package chess.view;public class ToolbarPanel {
+package chess.view;
+
+import javax.swing.*;
+
+public class ToolbarPanel extends JPanel {
 }

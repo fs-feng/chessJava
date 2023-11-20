@@ -5,16 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9bc52bf-9df9-45c0-be8e-3a7f913738ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/board/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/board/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/game/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/game/GameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/game/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/game/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/PlayerBlack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/PlayerBlack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/PlayerWhite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/PlayerWhite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/BoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/BoardPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/SquareButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/SquareButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/ToolbarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/ToolbarPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2YIcKc4WYyEcLuJyWNI5kpiioHF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -25,10 +57,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/source/java/chessJava/src/main/java/chess/pieces",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\source\java\chessJava\src\main\java\chess\pieces" />
+      <recent name="C:\source\java\chessJava\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\source\java\chessJava\src\main\resources" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,8 +89,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700216473249</updated>
-      <workItem from="1700216474566" duration="2000" />
+      <workItem from="1700216474566" duration="5796000" />
+      <workItem from="1700226441007" duration="1645000" />
+      <workItem from="1700318954489" duration="332000" />
+      <workItem from="1700485867812" duration="8101000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
