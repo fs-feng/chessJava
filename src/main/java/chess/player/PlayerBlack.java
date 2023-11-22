@@ -10,6 +10,6 @@ public class PlayerBlack extends Player{
 
     @Override
     public Move getNextMove() {
-        return null;
+        return new Move(getStart(), getEnd());
     }
 }

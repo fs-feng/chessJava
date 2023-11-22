@@ -33,7 +33,7 @@ public class SquareButton extends JButton {
         this.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                gameHandler.handleButtonClick(row, col);
+                gameHandler.handleButtonClick(square);
             }
         });
     }

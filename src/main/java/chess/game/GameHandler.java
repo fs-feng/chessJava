@@ -23,33 +23,48 @@ public class GameHandler {
         blackPlayer = new PlayerBlack(Color.black);
         currentPlayer = whitePlayer;
         selectedButton = null;
-
     }
 
-    public void handleButtonClick(int row, int col) {
-        SquareButton button = squareButtons[row][col];
-        if (selectedButton == null && button.getSquare().getPiece() != null) {
-            if (currentPlayer.getColor() == button.getSquare().getPiece().getColor()) {
-                selectedButton = button;
-                selectedButton.blueBorder();
+    public void handleButtonClick(Square clickedSquare) {
+        // Get the clicked square
+
+        // If no piece is currently selected
+        if (currentPlayer.getStart() == null) {
+            // If the clicked square contains a piece of the current player's color
+            if (clickedSquare.getPiece() != null && clickedSquare.getPiece().getColor() == currentPlayer.getColor()) {
+                // Select this piece
+                currentPlayer.setStart(clickedSquare);
             }
-        } else if (button.getSquare().getPiece() != null) {
-            if (currentPlayer.getColor() == button.getSquare().getPiece().getColor()) {
-                selectedButton.removeBorder();
-                selectedButton = squareButtons[row][col];
-                selectedButton.blueBorder();
-            } else if (button.getSquare().getPiece().getColor() != currentPlayer.getColor() && selectedButton.getSquare().getPiece() != null){
-                Move move = new Move(selectedButton.getSquare(), button.getSquare());
-                squareButtons[row][col].getSquare().getPiece().setAlive(false);
-                applyMove(move);
-                switchPlayer();
+        } else {
+            if (clickedSquare.getPiece() != null && clickedSquare.getPiece().getColor() == currentPlayer.getColor()) {
+                currentPlayer.setStart(clickedSquare);
+            } else {
+                // If a piece is already selected
+                currentPlayer.setEnd(clickedSquare);
+
+                // Get the next move from the current player
+                Move nextMove = currentPlayer.getNextMove();
+
+                // If the next move is valid
+                if (nextMove != null) {
+                    // Apply the move to the game
+                    applyMove(nextMove);
+                    nextMove = null;
+                    // Clear the selected squares
+                    currentPlayer.setStart(null);
+                    currentPlayer.setEnd(null);
+
+                    // Switch the current player
+                    switchPlayer();
+                } else {
+                    // If the next move is not valid, clear the selected squares
+                    currentPlayer.setStart(null);
+                    currentPlayer.setEnd(null);
+                }
             }
-        } else if (selectedButton != null){
-            Move move = new Move(selectedButton.getSquare(), squareButtons[row][col].getSquare());
-            applyMove(move);
-            switchPlayer();
         }
     }
+
 
     public void switchPlayer() {
         if (currentPlayer.getColor() == Color.white)
