@@ -34,14 +34,20 @@ public abstract class Piece {
         return new ImageIcon(pieceImage);
     }
 
-    //public abstract boolean moveValidator(Move move);
+
     public abstract List<Move> getPossiblesMoves(Board board);
 
-    public void move(Square destinationSquare) {
-        square.setPiece(null);
-        square = destinationSquare;
-        square.setPiece(this);
+    public boolean moveValidator(Move move, List<Move> possibleMoves) {
+        for (Move possibleMove : possibleMoves) {
+            if (move.equals(possibleMove)) {
+
+                return true;
+            }
+        }
+
+        return false;
     }
+
 
     public void move(Square destinationSquare, Piece killedPiece) {
         square.setPiece(null);
@@ -53,8 +59,8 @@ public abstract class Piece {
     }
 
 
-    public void capture() {
-
+    public void capture(Piece piece) {
+        piece.setAlive(false);
     }
 
 
@@ -74,6 +80,13 @@ public abstract class Piece {
         isAlive = alive;
     }
 
+    public boolean isHasMoved() {
+        return hasMoved;
+    }
+
+    public void setHasMoved(boolean hasMoved) {
+        this.hasMoved = hasMoved;
+    }
 
     public Square getSquare() {
         return square;

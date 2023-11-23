@@ -14,6 +14,22 @@ public class Move {
         this.pieceMoved = start.getPiece();
     }
 
+
+    //no idea how this works will look later
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Move move = (Move) obj;
+        return start == move.start &&
+                end == move.end &&
+                pieceMoved == move.pieceMoved;
+    }
+
     public Square getStart() {
         return start;
     }

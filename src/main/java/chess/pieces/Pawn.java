@@ -12,24 +12,39 @@ public class Pawn extends Piece {
         super(currentSquare, color, pieceName);
     }
 
+
     @Override
     public List<Move> getPossiblesMoves(Board board) {
         List<Move> possibleMoves = new ArrayList<>();
-        if (getColor() == Color.white) {
-            whitePossibleMoves();
-        } else if (getColor() == Color.black) {
-            blackPossibleMoves();
+
+        int moveDirection = (getColor() == Color.white) ? -1 : 1;
+        int row = getSquare().getRow() + moveDirection;
+        int col = getSquare().getCol();
+
+        if (0 <= row && row < 8 && 0 <= col && col < 8) {
+            //forward
+            if (board.getBoard()[row][col].getPiece() == null) {
+                possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col]));
+
+                if (!isHasMoved() && board.getBoard()[row + moveDirection][col].getPiece() == null) {
+                    possibleMoves.add(new Move(getSquare(), board.getBoard()[row + moveDirection][col]));
+                }
+            }
+
+            //leftside
+            if (getSquare().getCol() > 0 && board.getBoard()[row][col - 1].getPiece() != null && getColor() != board.getBoard()[row][col - 1].getPiece().getColor()) {
+                possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col - 1]));
+            }
+
+
+
+            //righht side
+            if (getSquare().getCol() < 7 && board.getBoard()[row][col + 1].getPiece() != null && getColor() != board.getBoard()[row][col + 1].getPiece().getColor()) {
+                possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col + 1]));
+            }
         }
 
-
-        return null;
-    }
-
-    private void blackPossibleMoves() {
-
-    }
-
-    private void whitePossibleMoves() {
+        return possibleMoves;
     }
 
 
