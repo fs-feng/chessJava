@@ -12,7 +12,6 @@ import chess.view.SquareButton;
 public class GameHandler {
     private Board board;
     private SquareButton[][] squareButtons;
-    private SquareButton selectedButton;
     private Player currentPlayer;
     private Player blackPlayer;
     private Player whitePlayer;
@@ -22,7 +21,6 @@ public class GameHandler {
         whitePlayer = new PlayerWhite(Color.white);
         blackPlayer = new PlayerBlack(Color.black);
         currentPlayer = whitePlayer;
-        selectedButton = null;
     }
 
     public void handleButtonClick(Square clickedSquare) {
@@ -75,6 +73,7 @@ public class GameHandler {
 
     public void applyMove(Move move) {
         move.getStart().setPiece(null);
+        move.getPieceMoved().setSquare(move.getEnd());
         move.getEnd().setPiece(move.getPieceMoved());
         updateBoardView();
     }

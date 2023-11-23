@@ -1,10 +1,13 @@
 package chess.pieces;
 
+import chess.board.Board;
 import chess.board.Square;
+import chess.game.Move;
 import chess.view.SquareButton;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public abstract class Piece {
     private Square square;
@@ -32,6 +35,7 @@ public abstract class Piece {
     }
 
     //public abstract boolean moveValidator(Move move);
+    public abstract List<Move> getPossiblesMoves(Board board);
 
     public void move(Square destinationSquare) {
         square.setPiece(null);

@@ -13,6 +13,7 @@ public class Square {
         piece = null;
     }
 
+
     public void setPiece(Piece piece) {
         this.piece = piece;
     }
