@@ -47,13 +47,13 @@ public class SquareButton extends JButton {
     }
 
     public void blueBorder() {
-        this.setBorder(BorderFactory.createLineBorder(Color.blue, 5));
+        this.setBorder(BorderFactory.createLineBorder(Color.decode("#00274E"), 7));
     }
     public void highlightButton() {
         if ((row % 2 == 1 && col % 2 == 1) || (row % 2 == 0 && col % 2 == 0))
             this.setBackground(Color.decode("#99BADD"));
         else
-            this.setBackground(Color.decode("#00274E"));
+            this.setBackground(Color.decode("#394867"));
     }
 
     public void removeStyling() {

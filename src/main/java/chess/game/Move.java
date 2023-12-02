@@ -3,15 +3,29 @@ package chess.game;
 import chess.board.Square;
 import chess.pieces.Piece;
 
+import java.security.PublicKey;
+
 public class Move {
     private Square start;
     private Square end;
     private Piece pieceMoved;
+    private Square killedPieceSquare;
+    private boolean isEnPassant;
 
     public Move(Square start, Square end) {
         this.start = start;
         this.end = end;
         this.pieceMoved = start.getPiece();
+        isEnPassant = false;
+        killedPieceSquare = null;
+    }
+
+    public Move(Square start, Square end, Square killedPieceSquare, boolean isEnPassant) {
+        this.start = start;
+        this.end = end;
+        this.pieceMoved = start.getPiece();
+        this.isEnPassant = isEnPassant;
+        this.killedPieceSquare = killedPieceSquare;
     }
 
 
@@ -40,5 +54,13 @@ public class Move {
 
     public Piece getPieceMoved() {
         return pieceMoved;
+    }
+
+    public boolean isEnPassant() {
+        return isEnPassant;
+    }
+
+    public Square getKilledPieceSquare() {
+        return killedPieceSquare;
     }
 }

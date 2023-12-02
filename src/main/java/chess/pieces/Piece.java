@@ -15,6 +15,7 @@ public abstract class Piece {
     private final Icon pieceIcon;
     private boolean isAlive;
     private boolean hasMoved;
+    private Move lastMove;
 
     public Piece(Square currentSquare, Color color, String pieceName) {
         this.square = currentSquare;
@@ -94,5 +95,13 @@ public abstract class Piece {
 
     public void setSquare(Square square) {
         this.square = square;
+    }
+
+    public void setLastMove(Move lastMove) {
+        this.lastMove = lastMove;
+    }
+
+    public Move getLastMove() {
+        return lastMove;
     }
 }

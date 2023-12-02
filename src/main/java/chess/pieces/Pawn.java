@@ -21,6 +21,7 @@ public class Pawn extends Piece {
         int row = getSquare().getRow() + moveDirection;
         int col = getSquare().getCol();
 
+
         if (0 <= row && row < 8 && 0 <= col && col < 8) {
             //forward
             if (board.getBoard()[row][col].getPiece() == null) {
@@ -35,12 +36,19 @@ public class Pawn extends Piece {
             if (getSquare().getCol() > 0 && board.getBoard()[row][col - 1].getPiece() != null && getColor() != board.getBoard()[row][col - 1].getPiece().getColor()) {
                 possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col - 1]));
             }
-
-
-
             //righht side
             if (getSquare().getCol() < 7 && board.getBoard()[row][col + 1].getPiece() != null && getColor() != board.getBoard()[row][col + 1].getPiece().getColor()) {
                 possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col + 1]));
+
+            }
+
+            if (getSquare().getRow() == 3 || getSquare().getRow() == 4) {
+                if (getLastMove() != null && getLastMove().getPieceMoved() instanceof Pawn && board.getBoard()[row + moveDirection][col - 1].equals(getLastMove().getStart()) && board.getBoard()[row - moveDirection][col - 1].equals(getLastMove().getEnd())) {
+                    possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col - 1], getLastMove().getEnd(), true));
+                }
+                if (getLastMove() != null && getLastMove().getPieceMoved() instanceof Pawn && board.getBoard()[row + moveDirection][col + 1].equals(getLastMove().getStart()) && board.getBoard()[row - moveDirection][col + 1].equals(getLastMove().getEnd())) {
+                    possibleMoves.add(new Move(getSquare(), board.getBoard()[row][col + 1], getLastMove().getEnd(), true));
+                }
             }
         }
 

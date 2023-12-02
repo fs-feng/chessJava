@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9bc52bf-9df9-45c0-be8e-3a7f913738ff" name="Changes" comment="init commit after rework">
+    <list default="true" id="d9bc52bf-9df9-45c0-be8e-3a7f913738ff" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chess/game/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/game/GameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chess/game/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/game/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/pieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/PlayerBlack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/PlayerBlack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/player/PlayerWhite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/player/PlayerWhite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chess/view/SquareButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/view/SquareButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -53,7 +44,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/source/java/chessJava/src/main/java/chess/pieces&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/source/java/Minesweeper&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,19 +98,45 @@
       <workItem from="1700318954489" duration="332000" />
       <workItem from="1700485867812" duration="8130000" />
       <workItem from="1700558617510" duration="3197000" />
-      <workItem from="1700735659533" duration="1330000" />
+      <workItem from="1700735659533" duration="1360000" />
+      <workItem from="1700819210570" duration="1900000" />
+      <workItem from="1701079783119" duration="5960000" />
+      <workItem from="1701177752992" duration="1068000" />
+      <workItem from="1701250411145" duration="2135000" />
+      <workItem from="1701431891198" duration="3122000" />
     </task>
-    <task id="LOCAL-00001" summary="init commit after rework">
+    <task id="LOCAL-00001" summary="changes">
       <option name="closed" value="true" />
       <created>1700508511216</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1700508511217</updated>
+      <updated>1700749424974</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/chess/pieces/Pawn.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

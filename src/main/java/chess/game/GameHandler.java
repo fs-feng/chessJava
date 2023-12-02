@@ -4,6 +4,7 @@ import chess.board.Board;
 import chess.board.Square;
 import chess.pieces.Color;
 import chess.pieces.King;
+import chess.pieces.Pawn;
 import chess.pieces.Piece;
 import chess.player.Player;
 import chess.player.PlayerBlack;
@@ -19,12 +20,14 @@ public class GameHandler {
     private Player currentPlayer;
     private Player blackPlayer;
     private Player whitePlayer;
+    private List<Move> moveHistory;
 
     public GameHandler() {
         board = new Board();
         whitePlayer = new PlayerWhite(Color.white, board.getWhitePieces());
         blackPlayer = new PlayerBlack(Color.black, board.getBlackPieces());
         currentPlayer = whitePlayer;
+        moveHistory = new ArrayList<>();
     }
 
     public void handleButtonClick(Square clickedSquare) {
@@ -33,6 +36,9 @@ public class GameHandler {
         if (currentPlayer.getStart() == null) {
             // If the clicked square contains a piece of the current player's color
             if (clickedSquare.getPiece() != null && clickedSquare.getPiece().getColor() == currentPlayer.getColor()) {
+                if (!moveHistory.isEmpty()) {
+                    clickedSquare.getPiece().setLastMove(moveHistory.getLast());
+                }
                 // Select this piece
                 currentPlayer.setStart(clickedSquare);
                 squareButtons[clickedSquare.getRow()][clickedSquare.getCol()].blueBorder();
@@ -49,6 +55,7 @@ public class GameHandler {
 
             // Get the next move from the current player
             Move nextMove = currentPlayer.getNextMove();
+
 
             if (nextMove.getPieceMoved().moveValidator(nextMove, nextMove.getPieceMoved().getPossiblesMoves(board))) {
                 applyMove(nextMove);
@@ -87,6 +94,8 @@ public class GameHandler {
         move.getStart().setPiece(null);
         move.getPieceMoved().setSquare(move.getEnd());
         move.getEnd().setPiece(move.getPieceMoved());
+        moveHistory.add(move);
+        isEnPassant();
         boolean isCheck = isKingCheck();
     }
 
@@ -96,6 +105,16 @@ public class GameHandler {
                 squareButtons[row][col].removeStyling();
                 squareButtons[row][col].displayPiece();
             }
+        }
+    }
+
+    public void isEnPassant() {
+        Move lastMove = moveHistory.getLast();
+
+        if (lastMove.isEnPassant()) {
+            lastMove.getKilledPieceSquare().setPiece(null);
+
+            lastMove.getPieceMoved().capture(lastMove.getKilledPieceSquare().getPiece());
         }
     }
 
